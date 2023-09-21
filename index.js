@@ -1,0 +1,1 @@
+const aFlavor = window.prompt(`Type in your flavor!!`);
