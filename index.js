@@ -7,15 +7,15 @@ const flavors = {};
 
 for (const flavor of stringArray){
     if (flavor in flavors){
-        flavors[flavor].push(flavor);
+        flavors[flavor]++;
     }
     else {
-      flavors[flavor] = [flavor];
+      flavors[flavor] = 1;
     }
   }
 
-let flavorString =``;
-for (const [flavor, count] of Object.entries(flavors)){
-    flavorString += `${flavor} ${count},`;
-}
-console.log(flavorString);
+  let flavorString = "";
+  for (const [flavor, count] of Object.entries(flavors)) {
+    flavorString += `${flavor} ${count}, `;
+  }
+console.log(flavorString); 
